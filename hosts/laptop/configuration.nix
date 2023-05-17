@@ -16,4 +16,6 @@
     networking.hostName = "nix-laptop";
 
     system.autoUpgrade.flake = "github:tjcardinal/nix-config#laptop";
+
+    system.stateVersion = "22.11";
 }
