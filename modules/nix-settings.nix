@@ -10,7 +10,7 @@
     persistent = true;
   };
 
-  system.autoUpdgrade = {
+  system.autoUpgrade = {
     enable = true;
     dates = "daily";
     operation = "switch";
