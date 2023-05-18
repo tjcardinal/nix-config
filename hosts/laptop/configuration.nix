@@ -1,8 +1,7 @@
 { pkgs, ... }:
-
 {
   imports = [
-    ./hardware-configuration.nix
+    /etc/nixos/hardware-configuration.nix
     ../../modules/gnome.nix
     ../../modules/grub.nix
     ../../modules/networking.nix
