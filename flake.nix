@@ -7,13 +7,6 @@
   {
     nixosConfigurations = {
 
-      laptop = nixpkgs.lib.nixosSystem {
-        system = "x86_64-linux";
-        modules = [
-          ./hosts/laptop/configuration.nix
-        ];
-      };
-
       desktop = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
         modules = [
@@ -21,10 +14,24 @@
         ];
       };
 
-      home-server = nixpkgs.lib.nixosSystem {
+      server = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
         modules = [
           ./hosts/home-server/configuration.nix
+        ];
+      };
+
+      laptop-y500 = nixpkgs.lib.nixosSystem {
+        system = "x86_64-linux";
+        modules = [
+          ./hosts/laptop-y500/configuration.nix
+        ];
+      };
+
+      laptop-g560 = nixpkgs.lib.nixosSystem {
+        system = "x86_64-linux";
+        modules = [
+          ./hosts/laptop-g560/configuration.nix
         ];
       };
 

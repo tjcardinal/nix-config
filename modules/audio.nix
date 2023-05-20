@@ -1,4 +1,5 @@
 {
+  # Disable alsa/pulseaudio to prevent conflicts with pipewire
   sound.enable = false;
   hardware.pulseaudio.enable = false;
 
