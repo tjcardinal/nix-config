@@ -3,6 +3,7 @@
   sound.enable = false;
   hardware.pulseaudio.enable = false;
 
+  # rtkit helps give pipewire realtime priority
   security.rtkit.enable = true;
   services.pipewire = {
     enable = true;
