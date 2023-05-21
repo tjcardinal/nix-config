@@ -3,7 +3,7 @@
   imports = [
     /etc/nixos/hardware-configuration.nix
     ../../modules/audio.nix
-    ../../modules/basic.nix
+    ../../modules/basics.nix
     ../../modules/browser.nix
     ../../modules/gnome.nix
     ../../modules/grub.nix
