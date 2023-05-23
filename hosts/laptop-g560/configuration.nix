@@ -11,6 +11,8 @@
     ../../modules/user.nix
     ];
 
+    environment.systemPackages = with pkgs; [ hello ];
+
     networking.hostName = "nixos-g560";
 
     system.autoUpgrade.flake = "github:tjcardinal/nix-config#laptop-g560";
