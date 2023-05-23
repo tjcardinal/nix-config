@@ -11,7 +11,7 @@
     ../../modules/user.nix
     ];
 
-    environment.systemPackages = with pkgs; [ hello ];
+    environment.systemPackages = with pkgs; [ hello cowsay ];
 
     networking.hostName = "nixos-g560";
 
