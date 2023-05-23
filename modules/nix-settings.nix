@@ -12,7 +12,7 @@
 
   system.autoUpgrade = {
     enable = true;
-    dates = "daily";
+    dates = "weekly";
     operation = "switch";
     persistent = true;
     allowReboot = true;
