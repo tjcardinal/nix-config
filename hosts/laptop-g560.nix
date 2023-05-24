@@ -2,11 +2,11 @@
 {
   imports = [
     /etc/nixos/hardware-configuration.nix
-    ../../modules/audio.nix
-    ../../modules/common.nix
-    ../../modules/gnome.nix
-    ../../modules/grub.nix
-    ../../modules/user.nix
+    ../modules/audio.nix
+    ../modules/common.nix
+    ../modules/gnome.nix
+    ../modules/grub.nix
+    ../modules/user.nix
     ];
 
     # environment.systemPackages = with pkgs; [ ];
