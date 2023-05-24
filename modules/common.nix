@@ -13,14 +13,6 @@
     persistent = true;
   };
 
-  system.autoUpgrade = {
-    enable = true;
-    dates = "weekly";:
-    operation = "switch";
-    persistent = true;
-    allowReboot = true;
-  };
-
   networking.networkmanager.enable = true;
   services.openssh.enable = true;
   services.printing.enable = true;
