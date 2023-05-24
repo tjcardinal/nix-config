@@ -10,28 +10,28 @@
       desktop = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
         modules = [
-          ./hosts/desktop/configurationZZZ.nix
+          ./hosts/desktop.nix
         ];
       };
 
       server = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
         modules = [
-          ./hosts/server/configuration.nix
+          ./hosts/server.nix
         ];
       };
 
       laptop-y500 = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
         modules = [
-          ./hosts/laptop-y500/configuration.nix
+          ./hosts/laptop-y500.nix
         ];
       };
 
       laptop-g560 = nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
         modules = [
-          ./hosts/laptop-g560/configuration.nix
+          ./hosts/laptop-g560.nix
         ];
       };
 
