@@ -10,8 +10,6 @@
   ];
 
   system.autoUpgrade = {
-    enable = true;
-    dates = "weekly";
     operation = "boot";
     flake = "github:tjcardinal/nix-config#desktop";
   };

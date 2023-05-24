@@ -13,6 +13,13 @@
     persistent = true;
   };
 
+  system.autoUpgrade = {
+    enable = true;
+    dates = "weekly";
+    operation = "switch";
+    flags = [ "--impure" ];
+  };
+
   networking.networkmanager.enable = true;
   services.openssh.enable = true;
   services.printing.enable = true;

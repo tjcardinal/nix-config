@@ -9,12 +9,7 @@
     ../modules/user.nix
   ];
 
-  system.autoUpgrade = {
-    enable = true;
-    dates = "weekly";
-    operation = "switch";
-    flake = "github:tjcardinal/nix-config#laptop-g560";
-  };
+  system.autoUpgrade.flake = "github:tjcardinal/nix-config#laptop-g560";
 
   networking.hostName = "nixos-g560";
 
