@@ -10,7 +10,6 @@
     automatic = true;
     dates = "weekly";
     options = "--delete-older-than 30d";
-    persistent = true;
   };
 
   system.autoUpgrade = {
@@ -42,5 +41,5 @@
     htop.enable = true;
   };
 
-  # environment.systemPackages = with pkgs; [ ];
+  environment.systemPackages = with pkgs; [ ripgrep fd ];
 }
