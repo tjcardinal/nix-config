@@ -2,19 +2,15 @@
 {
   imports = [
     /etc/nixos/hardware-configuration.nix
-    ../modules/audio.nix
+    ../modules/systemd-boot.nix
     ../modules/common.nix
     ../modules/gnome.nix
-    ../modules/systemd-boot.nix
-    ../modules/user.nix
+    ../modules/audio.nix
   ];
 
-  system.autoUpgrade = {
-    operation = "boot";
-    flake = "github:tjcardinal/nix-config#desktop";
-  };
+  system.autoUpgrade.operation = "boot";
 
-  networking.hostName = "nixos-desktop";
+  networking.hostName = "desktop";
 
   programs = {
     steam = {

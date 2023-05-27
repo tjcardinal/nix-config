@@ -2,16 +2,13 @@
 {
   imports = [
     /etc/nixos/hardware-configuration.nix
-    ../modules/audio.nix
+    ../modules/grub.nix
     ../modules/common.nix
     ../modules/gnome.nix
-    ../modules/grub.nix
-    ../modules/user.nix
+    ../modules/audio.nix
   ];
 
-  system.autoUpgrade.flake = "github:tjcardinal/nix-config#laptop-g560";
-
-  networking.hostName = "nixos-g560";
+  networking.hostName = "laptop-g560";
 
   # environment.systemPackages = with pkgs; [ ];
 

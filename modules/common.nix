@@ -1,9 +1,9 @@
 { pkgs, ... }:
-
 {
   nixpkgs.config.allowUnfree = true;
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
+
   nix.settings.auto-optimise-store = true;
 
   nix.gc = {
@@ -16,12 +16,21 @@
     enable = true;
     dates = "weekly";
     operation = "switch";
+    flake = "github:tjcardinal/nix-config";
     flags = [ "--impure" ];
   };
 
+  users.users.tylerc = {
+    isNormalUser = true;
+    description = "Tyler Cardinal";
+    extraGroups = [ "networkmanager" "wheel" ];
+  };
+
   networking.networkmanager.enable = true;
+
   services.openssh.enable = true;
   services.printing.enable = true;
+
   time.timeZone = "America/Chicago";
 
   programs = {
