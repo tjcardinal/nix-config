@@ -56,7 +56,12 @@
       };
     };
 
+    fzf = {
+      keybindings = true;
+      fuzzyCompletion = true;
+    };
+
   };
 
-  environment.systemPackages = with pkgs; [ ripgrep fd bat ];
+  environment.systemPackages = with pkgs; [ ripgrep fd bat fzf ];
 }
