@@ -51,8 +51,8 @@
       config = {
 	credential.helper = "store";
         init.defaultBranch = "main";
-	user.email = "83625450+tjcardinal@users.noreply.github.com"
-	user.name = "Tyler Cardinal"
+	user.email = "83625450+tjcardinal@users.noreply.github.com";
+	user.name = "Tyler Cardinal";
       };
     };
 
