@@ -46,9 +46,17 @@
       clock24 = true;
     };
 
-    git.enable = true;
-    htop.enable = true;
+    git = {
+      enable = true;
+      config = {
+	credential.helper = "store";
+        init.defaultBranch = "main";
+	user.email = "83625450+tjcardinal@users.noreply.github.com"
+	user.name = "Tyler Cardinal"
+      };
+    };
+
   };
 
-  environment.systemPackages = with pkgs; [ ripgrep fd ];
+  environment.systemPackages = with pkgs; [ ripgrep fd bat ];
 }
