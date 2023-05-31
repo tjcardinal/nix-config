@@ -13,7 +13,7 @@
   services.xserver = {
     videoDrivers = [ "nvidia" ];
     displayManager.gdm.wayland = false;
-    displayManager.defaultSession = "gnome xorg";
+    displayManager.defaultSession = "gnome-xorg";
   };
 
   hardware = {
