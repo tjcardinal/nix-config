@@ -10,14 +10,19 @@
 
   networking.hostName = "laptop-y500";
 
-  services.xserver.videoDrivers = [ "nvidia" ];
+  services.xserver = {
+    videoDrivers = [ "nvidia" ];
+    displayManager.gdm.wayland = false;
+    displayManager.defaultSession = "gnome xorg";
+  };
+
   hardware = {
     opengl.enable = true;
     nvidia.package = config.boot.kernelPackages.nvidiaPackages.legacy_470;
     nvidia.modesetting.enable = true;
   };
 
-  # environment.systemPackages = with pkgs; [ ];
+  environment.systemPackages = with pkgs; [ firefox ];
 
   system.stateVersion = "22.11";
 }
