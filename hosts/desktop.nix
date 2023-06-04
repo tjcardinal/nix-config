@@ -6,21 +6,14 @@
     ../modules/common.nix
     ../modules/gnome.nix
     ../modules/audio.nix
+    ../modules/firefox.nix
+    ../modules/steam.nix
   ];
-
-  system.autoUpgrade.operation = "boot";
 
   networking.hostName = "desktop";
 
-  programs = {
-    steam = {
-      enable = true;
-      remotePlay.openFirewall = true; # Open ports in the firewall for Steam Remote Play
-      dedicatedServer.openFirewall = true; # Open ports in the firewall for Source Dedicated Server
-    };
-
-    firefox.enable = true;
-  };
+  # Use boot over switch to reduce disruption while playing games
+  system.autoUpgrade.operation = "boot";
 
   environment.systemPackages = with pkgs; [ steam-run sunshine ];
 

@@ -28,8 +28,17 @@
 
   networking.networkmanager.enable = true;
 
-  services.openssh.enable = true;
-  services.printing.enable = true;
+  services = {
+    openssh.enable = true;
+
+    printing.enable = true;
+    #printing.drivers = [ pkgs.gutenprint ];
+
+    avahi = {
+      enable = true;
+      nssmdns = true;
+    };
+  };
 
   time.timeZone = "America/Chicago";
 

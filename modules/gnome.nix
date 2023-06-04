@@ -7,5 +7,12 @@
     excludePackages = with pkgs; [ xterm ];
   };
 
-  environment.gnome.excludePackages = with pkgs; [ gnome-tour ];
+  environment.systemPackages = with pkgs.gnome; [ gnome-tweaks ];
+
+  #environment.gnome.excludePackages = (with pkgs; [
+  #  gnome-tour
+  #]) ++ (with pkgs.gnome; [
+  #  epiphany
+  #  geary
+  #]);
 }
