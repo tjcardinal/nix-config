@@ -26,7 +26,7 @@
     nvidia.modesetting.enable = true;
   };
 
-  #environment.systemPackages = with pkgs; [ ];
+  environment.systemPackages = with pkgs; [ ];
 
   system.stateVersion = "22.11";
 }
