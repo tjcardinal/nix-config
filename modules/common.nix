@@ -32,12 +32,7 @@
     openssh.enable = true;
 
     printing.enable = true;
-    #printing.drivers = [ pkgs.gutenprint ];
-
-    avahi = {
-      enable = true;
-      nssmdns = true;
-    };
+    printing.drivers = [ pkgs.gutenprint ];
   };
 
   time.timeZone = "America/Chicago";
