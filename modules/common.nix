@@ -43,6 +43,13 @@
       defaultEditor = true;
       viAlias = true;
       vimAlias = true;
+      configure.customRC = ''
+        set ignorecase
+        set number
+        set relativenumber
+        set cursorline
+        set cursorcolumn
+      '';
     };
 
     tmux = {
@@ -53,10 +60,10 @@
     git = {
       enable = true;
       config = {
-	credential.helper = "store";
+        credential.helper = "store";
         init.defaultBranch = "main";
-	user.email = "83625450+tjcardinal@users.noreply.github.com";
-	user.name = "Tyler Cardinal";
+        user.email = "83625450+tjcardinal@users.noreply.github.com";
+        user.name = "Tyler Cardinal";
       };
     };
 
