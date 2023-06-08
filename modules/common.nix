@@ -44,11 +44,27 @@
       viAlias = true;
       vimAlias = true;
       configure.customRC = ''
-        set ignorecase
+        " Display changes
         set number
         set relativenumber
+
         set cursorline
         set cursorcolumn
+
+        set linebreak
+
+        " Functional changes
+        set ignorecase
+        set smartcase
+
+        set splitbelow
+        set splitright
+
+        set scrolloff=5
+
+        inoremap jk <ESC>
+        nnoremap j gj
+        nnoremap k gk
       '';
     };
 
