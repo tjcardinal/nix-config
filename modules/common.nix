@@ -12,9 +12,11 @@
     options = "--delete-older-than 30d";
   };
 
+  # Random delay is to give time for wifi to reconnect after resuming from suspend
   system.autoUpgrade = {
     enable = true;
     dates = "weekly";
+    randomizedDelaySec = "15min";
     operation = "switch";
     flake = "github:tjcardinal/nix-config";
     flags = [ "--impure" ];
