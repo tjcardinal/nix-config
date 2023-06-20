@@ -1,0 +1,27 @@
+name: Update flake.lock
+
+on:
+  schedule:
+    - cron: "0 6 * * 0"
+
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - uses: cachix/install-nix-action@v22
+
+      - run: nix flake update
+
+      - uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          commit_message: Update flake.lock
+          branch: main
+          file_pattern: flake.lock
+          commit_user_name: Flake Bot
+          commit_author: Flake Bot <actions@github.com>
+          skip_fetch: true
