@@ -25,6 +25,8 @@
     nvidia.modesetting.enable = true;
   };
 
+  nixpkgs.config.nvidia.acceptLicense = true;
+
   environment.systemPackages = with pkgs; [ ];
 
   system.stateVersion = "22.11";
