@@ -2,10 +2,10 @@
 {
   imports = [
     /etc/nixos/hardware-configuration.nix
-    ../modules/gnome.nix
-    ../modules/audio.nix
-    ../modules/firefox.nix
-    ../modules/steam.nix
+    ../../modules/gnome.nix
+    ../../modules/audio.nix
+    ../../modules/firefox.nix
+    ../../modules/steam.nix
   ];
 
   # Need grub since this is non-UEFI

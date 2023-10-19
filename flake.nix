@@ -10,7 +10,7 @@
         system = "x86_64-linux";
         modules = [
 	  ./modules/common.nix
-	  ./hosts/${hostname}.nix
+	  ./hosts/${hostname}/${hostname}.nix
 	];
       };
   in
