@@ -3,7 +3,6 @@
   imports = [
     /etc/nixos/hardware-configuration.nix
     ../modules/systemd-boot.nix
-    ../modules/common.nix
   ];
 
   networking.hostName = "server";

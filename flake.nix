@@ -4,36 +4,22 @@
   inputs.nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
 
   outputs = { self, nixpkgs }:
-  {
-    nixosConfigurations = {
-      desktop = nixpkgs.lib.nixosSystem {
+  let
+    nixosSystem = hostname:
+      nixpkgs.lib.nixosSystem {
         system = "x86_64-linux";
         modules = [
-          ./hosts/desktop.nix
-        ];
+	  ./modules/common.nix
+	  ./hosts/${hostname}.nix
+	];
       };
-
-      server = nixpkgs.lib.nixosSystem {
-        system = "x86_64-linux";
-        modules = [
-          ./hosts/server.nix
-        ];
+  in
+    {
+      nixosConfigurations = {
+        desktop = nixosSystem "desktop";
+        server = nixosSystem "server";
+        laptop-y500 = nixosSystem "laptop-y500";
+        laptop-g560 = nixosSystem "laptop-g560";
       };
-
-      laptop-y500 = nixpkgs.lib.nixosSystem {
-        system = "x86_64-linux";
-        modules = [
-          ./hosts/laptop-y500.nix
-        ];
-      };
-
-      laptop-g560 = nixpkgs.lib.nixosSystem {
-        system = "x86_64-linux";
-        modules = [
-          ./hosts/laptop-g560.nix
-        ];
-      };
-
     };
-  };
 }

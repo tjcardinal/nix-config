@@ -3,7 +3,6 @@
   imports = [
     /etc/nixos/hardware-configuration.nix
     ../modules/systemd-boot.nix
-    ../modules/common.nix
     ../modules/gnome.nix
     ../modules/audio.nix
     ../modules/firefox.nix
