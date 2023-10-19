@@ -41,7 +41,10 @@
         last-selected-power-profile='performance'
       '';
       extraGSettingsOverridePackages = with pkgs; [
-        gnome.gnome-settings-daemon gnome.gnome-shell gnome.mutter gsettings-desktop-schemas
+        gnome.gnome-settings-daemon
+        gnome.gnome-shell
+        gnome.mutter
+        gsettings-desktop-schemas
       ];
     };
     excludePackages = with pkgs; [ xterm ];

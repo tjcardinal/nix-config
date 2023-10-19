@@ -1,7 +1,6 @@
 {
   programs.firefox = {
     enable = true;
-    policies = {
-    };
+    policies = { };
   };
 }
