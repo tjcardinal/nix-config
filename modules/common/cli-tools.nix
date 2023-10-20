@@ -12,7 +12,11 @@
         set relativenumber
 
         set cursorline
-        set cursorcolumn
+
+        " cursorcolumn doesn't work with vscode-neovim
+        if !exists('g:vscode')
+          set cursorcolumn
+        endif
 
         set linebreak
 

@@ -1,4 +1,3 @@
-{ pkgs, ... }:
 {
   imports = [
     ./common/nix-settings.nix

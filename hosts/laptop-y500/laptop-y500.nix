@@ -7,6 +7,7 @@
     ../../modules/audio.nix
     ../../modules/firefox.nix
     ../../modules/steam.nix
+    ../../modules/dev.nix
   ];
 
   networking.hostName = "laptop-y500";
