@@ -47,6 +47,13 @@
         init.defaultBranch = "main";
         user.email = "83625450+tjcardinal@users.noreply.github.com";
         user.name = "Tyler Cardinal";
+
+	core.pager = "delta";
+        interactive.diffFilter = "delta --color-only";
+	delta.navigate = true;
+	delta.light = false;
+	merge.conflictstyle = "diff3";
+	diff.colorMoved = "default";
       };
     };
 
@@ -55,7 +62,17 @@
       fuzzyCompletion = true;
     };
 
+    direnv.enable = true;
+
+    starship.enable = true;
+
+    htop.enable = true;
+
+    bash.interactiveShellInit = ''
+      eval "$(zoxide init bash)"
+    '';
+
   };
 
-  environment.systemPackages = with pkgs; [ ripgrep fd bat fzf ];
+  environment.systemPackages = with pkgs; [ ripgrep fd bat tealdeer tree delta zoxide eza lsd ];
 }

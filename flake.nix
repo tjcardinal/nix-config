@@ -5,9 +5,10 @@
 
   outputs = { self, nixpkgs }:
     let
+      system = "x86_64-linux";
       nixosSystem = hostname:
         nixpkgs.lib.nixosSystem {
-          system = "x86_64-linux";
+          inherit system;
           modules = [
             ./modules/common.nix
             ./hosts/${hostname}/${hostname}.nix
@@ -15,7 +16,7 @@
         };
     in
     {
-      formatter.x86_64-linux = nixpkgs.legacyPackages.x86_64-linux.nixpkgs-fmt;
+      formatter.${system} = nixpkgs.legacyPackages.${system}.nixpkgs-fmt;
       nixosConfigurations = {
         desktop = nixosSystem "desktop";
         server = nixosSystem "server";
