@@ -8,7 +8,6 @@
     ../../modules/firefox.nix
     ../../modules/steam.nix
     ../../modules/dev.nix
-    ../../modules/virtualization.nix
   ];
 
   networking.hostName = "laptop-y500";

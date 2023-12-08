@@ -48,12 +48,12 @@
         user.email = "83625450+tjcardinal@users.noreply.github.com";
         user.name = "Tyler Cardinal";
 
-	core.pager = "delta";
+        core.pager = "delta";
         interactive.diffFilter = "delta --color-only";
-	delta.navigate = true;
-	delta.light = false;
-	merge.conflictstyle = "diff3";
-	diff.colorMoved = "default";
+        delta.navigate = true;
+        delta.light = false;
+        merge.conflictstyle = "diff3";
+        diff.colorMoved = "default";
       };
     };
 
