@@ -24,6 +24,8 @@
         show-battery-percentage = true;
       };
 
+      "org/gnome/desktop/peripherals/keyboard".numlock-state = true;
+
       "org/gnome/desktop/peripherals/mouse".accel-profile = "flat";
 
       "org/gnome/desktop/peripherals/touchpad" = {
