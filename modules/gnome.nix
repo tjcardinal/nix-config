@@ -7,14 +7,13 @@
     desktopManager.gnome.enable = true;
   };
 
-  environment.systemPackages = with pkgs.gnome; [ gnome-tweaks ];
+  environment.systemPackages = with pkgs; [ gnome.gnome-tweaks ];
 
-  environment.gnome.excludePackages = (with pkgs; [
+  environment.gnome.excludePackages = with pkgs; [
     gnome-tour
-  ]) ++ (with pkgs.gnome; [
-    epiphany
-    geary
-  ]);
+    gnome.epiphany
+    gnome.geary
+  ];
 
   programs.dconf.profiles.user.databases = [{
     settings = with lib.gvariant; {
