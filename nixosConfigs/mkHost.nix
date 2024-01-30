@@ -2,7 +2,7 @@ nixpkgs: system: hostname:
 nixpkgs.lib.nixosSystem {
   inherit system;
   modules = [
-    ../modules/common.nix
+    ./modules/common.nix
     ./${hostname}/${hostname}.nix
   ];
 }

@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+pkgs:
   pkgs.neovim.override {
     configure = {
       packages.myVimPackages = with pkgs.vimPlugins; {
