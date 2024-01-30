@@ -3,7 +3,7 @@
   services.xserver = {
     enable = true;
     excludePackages = with pkgs; [ xterm ];
-    displayManager.gdm.enable = true;
+    displayManager.lightdm.enable = true;
     desktopManager.gnome.enable = true;
   };
 

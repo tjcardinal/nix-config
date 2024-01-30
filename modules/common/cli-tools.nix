@@ -1,40 +1,6 @@
 { pkgs, ... }:
 {
   programs = {
-    neovim = {
-      enable = true;
-      defaultEditor = true;
-      viAlias = true;
-      vimAlias = true;
-      configure.customRC = ''
-        " Display changes
-        set number
-        set relativenumber
-
-        set cursorline
-
-        " cursorcolumn doesn't work with vscode-neovim
-        if !exists('g:vscode')
-          set cursorcolumn
-        endif
-
-        set linebreak
-
-        " Functional changes
-        set ignorecase
-        set smartcase
-
-        set splitbelow
-        set splitright
-
-        set scrolloff=5
-
-        inoremap jk <ESC>
-        nnoremap j gj
-        nnoremap k gk
-      '';
-    };
-
     tmux = {
       enable = true;
       clock24 = true;

@@ -23,5 +23,6 @@
         laptop-y500 = nixosSystem "laptop-y500";
         laptop-g560 = nixosSystem "laptop-g560";
       };
+      packages.${system}.neovim = import ./neovim/neovim.nix (nixpkgs.legacyPackages.${system});
     };
 }
