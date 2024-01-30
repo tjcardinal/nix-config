@@ -6,23 +6,17 @@
   outputs = { self, nixpkgs }:
     let
       system = "x86_64-linux";
-      nixosSystem = hostname:
-        nixpkgs.lib.nixosSystem {
-          inherit system;
-          modules = [
-            ./modules/common.nix
-            ./hosts/${hostname}/${hostname}.nix
-          ];
-        };
+      pkgs = nixpkgs.legacyPackages.${system};
+      host = import ./nixosConfigs/hosts/host.nix nixpkgs system;
     in
     {
-      formatter.${system} = nixpkgs.legacyPackages.${system}.nixpkgs-fmt;
+      formatter.${system} = pkgs.nixpkgs-fmt;
       nixosConfigurations = {
-        desktop = nixosSystem "desktop";
-        server = nixosSystem "server";
-        laptop-y500 = nixosSystem "laptop-y500";
-        laptop-g560 = nixosSystem "laptop-g560";
+        desktop = host "desktop";
+        laptop-g560 = host "laptop-g560";
+        laptop-y500 = host "laptop-y500";
+        server = host "server";
       };
-      packages.${system}.neovim = import ./neovim/neovim.nix (nixpkgs.legacyPackages.${system});
+      packages.${system}.neovim = import ./neovim/neovim.nix pkgs;
     };
 }
