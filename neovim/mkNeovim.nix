@@ -21,8 +21,8 @@ pkgs:
 
     customRC = ''
       lua <<EOF
-      ${builtin.readFile ./config/telescope.lua}
-      ${builtin.readFile ./config/treesitter.lua}
+      ${builtins.readFile ./config/telescope.lua}
+      ${builtins.readFile ./config/treesitter.lua}
       require'ibl'.setup()
       require'lualine'.setup()
       require'nvim-autopairs'.setup()
