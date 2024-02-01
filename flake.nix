@@ -5,9 +5,10 @@
 
   outputs = { self, nixpkgs }:
     let
-      system = "x86_64-linux";
-      pkgs = nixpkgs.legacyPackages.${system};
       mkHost = import ./nixosConfigs/mkHost.nix nixpkgs system;
+      mkNeovim = import ./neovim/mkNeovim.nix pkgs;
+      pkgs = nixpkgs.legacyPackages.${system};
+      system = "x86_64-linux";
     in
     {
       formatter.${system} = pkgs.nixpkgs-fmt;
@@ -17,6 +18,6 @@
         laptop-y500 = mkHost "laptop-y500";
         server = mkHost "server";
       };
-      packages.${system}.neovim = import ./neovim/neovim.nix pkgs;
+      packages.${system}.neovim = pkgs.neovim.override mkNeovim;
     };
 }

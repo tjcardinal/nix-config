@@ -14,20 +14,18 @@
 
   hardware.bluetooth.enable = true;
 
-  # Wayland needs to be disable since nvidia 470 doesn't work well with it
-  services.xserver = {
-    videoDrivers = [ "nvidia" ];
-    displayManager.gdm.wayland = false;
-  };
   hardware = {
     opengl.enable = true;
     nvidia.package = config.boot.kernelPackages.nvidiaPackages.legacy_470;
     nvidia.modesetting.enable = true;
   };
-
   nixpkgs.config.nvidia.acceptLicense = true;
 
-  environment.systemPackages = with pkgs; [ ];
+  # Wayland needs to be disable since nvidia 470 doesn't work well with it
+  services.xserver = {
+    videoDrivers = [ "nvidia" ];
+    displayManager.gdm.wayland = false;
+  };
 
   system.stateVersion = "22.11";
 }

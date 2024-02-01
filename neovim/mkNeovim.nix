@@ -1,16 +1,21 @@
 pkgs:
-pkgs.neovim.override {
+{
   configure = {
     packages.myVimPackages = with pkgs.vimPlugins; {
       start = [
         nvim-treesitter.withAllGrammars
         # nvim-cmp
-        which-key-nvim
-        plenary-nvim
-        telescope-nvim
-        nvim-lspconfig
-        onedark-nvim
-        indent-blankline-nvim
+        # which-key-nvim
+        # plenary-nvim
+        # telescope-nvim
+        # nvim-lspconfig
+        # catppuccin-nvim
+        # indent-blankline-nvim
+        # lualine-nvim
+        # comment-nvim
+        # nvim-autopairs
+        # nvim-surround
+        # nvim-treesitter-context
       ];
     };
 
@@ -44,20 +49,6 @@ pkgs.neovim.override {
               nnoremap k gk
 
       lua <<EOF
-              require 'ibl'.setup()
-
-                
-              require 'nvim-treesitter.configs'.setup {
-                      highlight = {
-                              enable = true
-                      },
-                      indent = {
-                              enable = true
-                      },
-              }
-              require 'which-key'.setup {}
-              require'lspconfig'.rust_analyzer.setup{}
-
       EOF
     '';
   };

@@ -1,6 +1,13 @@
 { pkgs, ... }:
 {
   programs = {
+    neovim = {
+      enable = true;
+      defaultEditor = true;
+      viAlias = true;
+      vimAlias = true;
+    } // (import ../../../neovim/mkNeovim.nix pkgs);
+
     tmux = {
       enable = true;
       clock24 = true;

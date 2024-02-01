@@ -1,9 +1,8 @@
 {
   imports = [
+    ./common/cli-tools.nix
     ./common/nix-settings.nix
     ./common/system-settings.nix
-    ./common/cli-tools.nix
     ./common/user.nix
-    ./common/neovim.nix
   ];
 }
