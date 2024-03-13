@@ -21,6 +21,7 @@ pkgs:
         # Automatic. Set and forget
         catppuccin-nvim
         fennel-vim
+	conjure
         indent-blankline-nvim
         lualine-nvim
         nvim-autopairs
