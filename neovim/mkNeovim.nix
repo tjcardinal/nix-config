@@ -20,6 +20,7 @@ pkgs:
       start = [
         # Automatic. Set and forget
         catppuccin-nvim
+        fennel-vim
         indent-blankline-nvim
         lualine-nvim
         nvim-autopairs
