@@ -20,8 +20,8 @@ pkgs:
       start = [
         # Automatic. Set and forget
         catppuccin-nvim
+        conjure
         fennel-vim
-	conjure
         indent-blankline-nvim
         lualine-nvim
         nvim-autopairs
@@ -29,16 +29,17 @@ pkgs:
         nvim-treesitter.withAllGrammars
         plenary-nvim
         which-key-nvim
+        # nvim-lspconfig
 
         # Manual. New functionality
         telescope-nvim
+        # comment-nvim
         # gitsigns-nvim
         # luasnip
-        # nvim-treesitter-textobjects
-        # comment-nvim
         # nvim-cmp
         # nvim-lspconfig
         # nvim-surround
+        # nvim-treesitter-textobjects
       ];
     };
 
