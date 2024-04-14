@@ -30,10 +30,7 @@
       };
     };
 
-    fzf = {
-      keybindings = true;
-      fuzzyCompletion = true;
-    };
+    fzf.enable = true;
 
     direnv.enable = true;
 
