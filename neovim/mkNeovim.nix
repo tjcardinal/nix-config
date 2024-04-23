@@ -8,11 +8,7 @@ pkgs:
       lua <<EOF
       ${builtins.readFile ./config/telescope.lua}
       ${builtins.readFile ./config/treesitter.lua}
-      require'ibl'.setup()
-      require'lualine'.setup()
-      require'nvim-autopairs'.setup()
-      require'which-key'.setup()
-      vim.cmd.colorscheme "catppuccin-mocha"
+      ${builtins.readFile ./config/simple_plugins.lua}
       EOF
     '';
 
