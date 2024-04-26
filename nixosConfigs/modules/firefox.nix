@@ -2,6 +2,21 @@
   programs.firefox = {
     enable = true;
     policies = {
+      Preferences =
+        let
+          lock-false = {
+            Value = false;
+            Status = "locked";
+          };
+          lock-true = {
+            Value = true;
+            Status = "locked";
+          };
+        in
+        {
+          "general.autoScroll" = lock-true;
+        };
+
       ExtensionSettings = {
         # ClearURLs
         "{74145f27-f039-47ce-a470-a662b129930a}" = {
