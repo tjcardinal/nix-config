@@ -23,7 +23,7 @@
       sha256_aarch64 = "sha256-CFkg2ARlGWqlFQKm8SlbwMH6eLidHKA/q5QGVOpPGuU=";
       settingsSha256 = "sha256-r6DuIH/rnsCm/y51iRgPNi5/kz+EFMVABREdTjBneZ0=";
       persistencedSha256 = "sha256-e71fpPBBv8S/aoeXxBXkzKy5bsMMbv8y024cSLc8DYc=";
-      patches = [];
+      patches = [ ];
     };
     nvidia.modesetting.enable = true;
   };
