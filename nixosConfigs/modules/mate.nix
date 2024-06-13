@@ -8,7 +8,6 @@
   };
 
   programs.dconf.profiles.user.databases = [{
-    settings = with lib.gvariant; {
-    };
+    settings = with lib.gvariant; { };
   }];
 }
