@@ -29,8 +29,8 @@
   };
 
   # Need to turn bluetooth off when suspending to prevent freezes
-  powerManagement.powerUpCommands = "${pkgs.util-linux}/bin/rfkill unblock bluetooth";
-  powerManagement.powerDownCommands = "${pkgs.util-linux}/bin/rfkill block bluetooth\nsleep 30";
+  # powerManagement.powerUpCommands = "${pkgs.util-linux}/bin/rfkill unblock bluetooth";
+  powerManagement.powerDownCommands = "${pkgs.util-linux}/bin/rfkill block bluetooth";
 
   # Wayland needs to be disable since nvidia 470 doesn't work well with it
   services.xserver = {
