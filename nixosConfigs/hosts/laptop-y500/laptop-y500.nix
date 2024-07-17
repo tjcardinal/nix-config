@@ -15,10 +15,9 @@
   hardware.bluetooth.enable = true;
 
   hardware = {
-    opengl = {
+    graphics = {
       enable = true;
-      driSupport = true;
-      driSupport32Bit = true;
+      enable32Bit = true;
     };
     nvidia.package = config.boot.kernelPackages.nvidiaPackages.legacy_470;
     nvidia.modesetting.enable = true;

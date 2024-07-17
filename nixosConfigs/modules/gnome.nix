@@ -7,12 +7,12 @@
     desktopManager.gnome.enable = true;
   };
 
-  environment.systemPackages = with pkgs; [ gnome.gnome-tweaks ];
+  environment.systemPackages = with pkgs; [ gnome-tweaks ];
 
   environment.gnome.excludePackages = with pkgs; [
     gnome-tour
-    gnome.epiphany
-    gnome.geary
+    epiphany
+    geary
   ];
 
   programs.dconf.profiles.user.databases = [{
