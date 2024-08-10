@@ -6,6 +6,7 @@ let
       bbenoist.nix
       asvetliakov.vscode-neovim
       rust-lang.rust-analyzer
+      ms-vscode.cpptools
     ];
   });
 in

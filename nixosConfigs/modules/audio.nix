@@ -1,6 +1,5 @@
 {
-  # Disable alsa/pulseaudio to prevent conflicts with pipewire
-  sound.enable = false;
+  # Disable pulseaudio to prevent conflicts with pipewire
   hardware.pulseaudio.enable = false;
 
   # rtkit is optional but recommended. It helps give pipewire realtime priority
