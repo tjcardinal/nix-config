@@ -19,8 +19,11 @@
       enable = true;
       enable32Bit = true;
     };
-    nvidia.package = config.boot.kernelPackages.nvidiaPackages.legacy_470;
-    nvidia.modesetting.enable = true;
+    nvidia = {
+      package = config.boot.kernelPackages.nvidiaPackages.legacy_470;
+      modesetting.enable = true;
+      powerManagement.enable = true;
+    };
   };
   nixpkgs.config.nvidia.acceptLicense = true;
   environment.sessionVariables = {
