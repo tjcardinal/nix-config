@@ -19,16 +19,16 @@
       enable = true;
       enable32Bit = true;
     };
-    nvidia = {
-      package = config.boot.kernelPackages.nvidiaPackages.legacy_470;
-      modesetting.enable = true;
-      powerManagement.enable = true;
-    };
+    # nvidia = {
+    #   package = config.boot.kernelPackages.nvidiaPackages.legacy_470;
+    #   modesetting.enable = true;
+    #   powerManagement.enable = true;
+    # };
   };
-  nixpkgs.config.nvidia.acceptLicense = true;
-  environment.sessionVariables = {
-    GSK_RENDERER = "gl";
-  };
+  # nixpkgs.config.nvidia.acceptLicense = true;
+  # environment.sessionVariables = {
+  #   GSK_RENDERER = "gl";
+  # };
 
   # Need to turn bluetooth off when suspending to prevent freezes
   # powerManagement.powerUpCommands = "${pkgs.util-linux}/bin/rfkill unblock bluetooth";
@@ -36,7 +36,7 @@
 
   # Wayland needs to be disable since nvidia 470 doesn't work well with it
   services.xserver = {
-    videoDrivers = [ "nvidia" ];
+    # videoDrivers = [ "nvidia" ];
     displayManager.gdm.wayland = false;
   };
 
