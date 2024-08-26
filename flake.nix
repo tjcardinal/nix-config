@@ -6,7 +6,7 @@
   outputs = { self, nixpkgs }:
     let
       mkHost = import ./nixosConfigs/mkHost.nix nixpkgs system;
-      mkNeovim = import ./neovim/mkNeovim.nix pkgs;
+      myNeovim = import ./neovim/mkNeovim.nix pkgs;
       pkgs = nixpkgs.legacyPackages.${system};
       system = "x86_64-linux";
     in
@@ -18,6 +18,6 @@
         laptop-y500 = mkHost "laptop-y500";
         server = mkHost "server";
       };
-      packages.${system}.neovim = pkgs.neovim.override mkNeovim;
+      packages.${system}.neovim = myNeovim;
     };
 }
