@@ -7,7 +7,7 @@
     let
       mkHost = import ./nixosConfigs/mkHost.nix nixpkgs system;
       myNeovim = import ./neovim/mkNeovim.nix pkgs;
-      pkgs = nixpkgs.legacyPackages.${system};
+      pkgs = import nixpkgs { inherit system; };
       system = "x86_64-linux";
     in
     {

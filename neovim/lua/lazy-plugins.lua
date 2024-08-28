@@ -10,4 +10,4 @@ if not vim.g.is_nix then
   vim.opt.rtp:prepend(lazypath)
 end
 
-require('lazy').setup()
+require('lazy').setup('plugins')
