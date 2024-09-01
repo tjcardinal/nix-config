@@ -10,4 +10,29 @@ if not vim.g.is_nix then
   vim.opt.rtp:prepend(lazypath)
 end
 
-require('lazy').setup('plugins')
+require('lazy').setup({
+	dev = {
+		path = vim.g.plugin_path,
+		fallback = true,
+	},
+	spec = {
+		{ import = "plugins" },
+	},
+	ui = {
+		icons = vim.g.have_nerd_font and {} or {
+		      cmd = '⌘',
+		      config = '🛠',
+		      event = '📅',
+		      ft = '📂',
+		      init = '⚙',
+		      keys = '🗝',
+		      plugin = '🔌',
+		      runtime = '💻',
+		      require = '🌙',
+		      source = '📄',
+		      start = '🚀',
+		      task = '📌',
+		      lazy = '💤 ',
+		},
+	},
+})

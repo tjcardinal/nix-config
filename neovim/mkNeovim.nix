@@ -4,31 +4,39 @@ let
     configure = {
       customRC = ''
         lua vim.g.is_nix = true
-        lua vim.g.plugin_path = vim.api.nvim_get_runtime_file('pack/*/start/', false)[1]
-        lua vim.opt.rtp:prepend("${./.}")
-        luafile ${./.}/init.lua
+        lua vim.g.plugin_path = vim.api.nvim_get_runtime_file('pack/*/opt/', false)[1]
+        lua vim.opt.rtp:prepend("${./config}")
+        luafile ${./config}/init.lua
       '';
 
       packages.myPackages = with pkgs.vimPlugins; {
         start = [ lazy-nvim ];
         opt = [
-          # Automatic. Set and forget
-          neo-tree-nvim
-          vim-sleuth
+	  vim-sleuth
+	  gitsigns-nvim
+          which-key-nvim
+          telescope-nvim
+          nvim-lspconfig
+	  conform-nvim
+	  nvim-cmp
           catppuccin-nvim
+	  todo-comments-nvim
+	  mini-nvim
+          nvim-treesitter.withAllGrammars
+	  plenary-nvim
+          nvim-autopairs
+
+          indent-blankline-nvim
+	  friendly-snippets
+
+
+
+          # neo-tree-nvim
           # conjure
           # fennel-vim
-          indent-blankline-nvim
           lualine-nvim
-          # nvim-autopairs
           # nvim-treesitter-context
-          # nvim-treesitter.withAllGrammars
-          # plenary-nvim
-          # which-key-nvim
-          # nvim-lspconfig
-          #
-          # # Manual. New functionality
-          # telescope-nvim
+
           # comment-nvim
           # gitsigns-nvim
           # luasnip
