@@ -1,10 +1,8 @@
-vim.g.mapleader = ' '
-vim.g.maplocalleader = ' '
+vim.g.mapleader = " "
+vim.g.maplocalleader = " "
 
 vim.g.have_nerd_font = false
 
-require('options')
-require('keymaps')
-require('lazy-plugins')
-
-vim.cmd.colorscheme "catppuccin-mocha"
+require("options")
+require("keymaps")
+require("lazy-plugins")

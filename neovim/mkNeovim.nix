@@ -12,38 +12,34 @@ let
       packages.myPackages = with pkgs.vimPlugins; {
         start = [ lazy-nvim ];
         opt = [
-	  vim-sleuth
-	  gitsigns-nvim
-          which-key-nvim
-          telescope-nvim
-          nvim-lspconfig
-	  conform-nvim
-	  nvim-cmp
           catppuccin-nvim
-	  todo-comments-nvim
-	  mini-nvim
-          nvim-treesitter.withAllGrammars
-	  plenary-nvim
-          nvim-autopairs
-
+          comment-nvim
+          conform-nvim
+          gitsigns-nvim
           indent-blankline-nvim
-	  friendly-snippets
-
-
-
-          # neo-tree-nvim
-          # conjure
-          # fennel-vim
           lualine-nvim
-          # nvim-treesitter-context
+          nvim-autopairs
+          nvim-treesitter-context
+          nvim-treesitter-textobjects
+          nvim-treesitter.withAllGrammars
+          plenary-nvim
+          todo-comments-nvim
+          vim-sleuth
+          which-key-nvim
+          telescope-fzf-native-nvim
+          telescope-ui-select-nvim
 
-          # comment-nvim
-          # gitsigns-nvim
-          # luasnip
-          # nvim-cmp
-          # nvim-lspconfig
+          # not configured yet
+          nvim-lspconfig
+          nvim-cmp
+          telescope-nvim
+          luasnip
+          nvim-web-devicons
+          friendly-snippets
+
+          mini-nvim
+
           # nvim-surround
-          # nvim-treesitter-textobjects
         ];
       };
     };
