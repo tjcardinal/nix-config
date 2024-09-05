@@ -15,6 +15,12 @@ require("lazy").setup({
 		path = vim.g.plugin_path,
 		fallback = false,
 	},
+	performance = {
+		reset_packpath = false,
+		rtp = {
+			reset = false,
+		},
+	},
 	spec = {
 		{ import = "plugins" },
 	},
