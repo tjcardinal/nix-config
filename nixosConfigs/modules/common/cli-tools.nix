@@ -46,5 +46,5 @@
 
   };
 
-  environment.systemPackages = with pkgs; [ ripgrep fd bat tealdeer tree delta zoxide eza lsd ];
+  environment.systemPackages = with pkgs; [ ripgrep fd bat tealdeer tree delta zoxide eza lsd xclip ];
 }
