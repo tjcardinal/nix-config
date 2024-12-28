@@ -3,10 +3,10 @@
 
   inputs.nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
 
-  outputs = { self, nixpkgs }:
+  outputs =
+    { self, nixpkgs }:
     let
       mkHost = import ./nixosConfigs/mkHost.nix nixpkgs system;
-      myNeovim = import ./neovim/mkNeovim.nix pkgs;
       pkgs = nixpkgs.legacyPackages.${system};
       system = "x86_64-linux";
     in
