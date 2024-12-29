@@ -18,6 +18,5 @@
         laptop-y500 = mkHost "laptop-y500";
         server = mkHost "server";
       };
-      packages.${system}.neovim = myNeovim;
     };
 }

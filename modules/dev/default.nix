@@ -1,5 +1,5 @@
 {
   imports = [
-    ./dev/vscodium.nix
+    ./vscodium.nix
   ];
 }

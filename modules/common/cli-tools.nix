@@ -6,7 +6,7 @@
       defaultEditor = true;
       viAlias = true;
       vimAlias = true;
-    } // (import ../../../neovim/mkNeovim.nix pkgs);
+    };
 
     tmux = {
       enable = true;

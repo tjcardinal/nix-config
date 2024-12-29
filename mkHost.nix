@@ -3,6 +3,6 @@ nixpkgs.lib.nixosSystem {
   inherit system;
   modules = [
     ./modules/common.nix
-    ./hosts/${hostname}/${hostname}.nix
+    ./hosts/${hostname}
   ];
 }
