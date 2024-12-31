@@ -1,12 +1,32 @@
 {
   "nodes": {
+    "neovim": {
+      "inputs": {
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1735419566,
+        "narHash": "sha256-Os4O+ldrrkU2E6WVzr2r4h9X+iQJUotola+hDg5+V/o=",
+        "owner": "tjcardinal",
+        "repo": "nvim-config",
+        "rev": "5cd9d81951562c45638431e2c303113d44d56159",
+        "type": "github"
+      },
+      "original": {
+        "owner": "tjcardinal",
+        "repo": "nvim-config",
+        "type": "github"
+      }
+    },
     "nixpkgs": {
       "locked": {
-        "lastModified": 1735291276,
-        "narHash": "sha256-NYVcA06+blsLG6wpAbSPTCyLvxD/92Hy4vlY9WxFI1M=",
+        "lastModified": 1735471104,
+        "narHash": "sha256-0q9NGQySwDQc7RhAV2ukfnu7Gxa5/ybJ2ANT8DQrQrs=",
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "634fd46801442d760e09493a794c4f15db2d0cbb",
+        "rev": "88195a94f390381c6afcdaa933c2f6ff93959cb4",
         "type": "github"
       },
       "original": {
@@ -18,6 +38,7 @@
     },
     "root": {
       "inputs": {
+        "neovim": "neovim",
         "nixpkgs": "nixpkgs"
       }
     }
